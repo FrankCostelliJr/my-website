@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-  --primary-white: #fff;
-  --primary-red: red;
-  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-white: #fffeff;
+  --primary-blue: #a9b7e7;
+  --primary-dark: #190d30;
+  --primary-darkblue: #2a2cac;
+  --primary-purple: #9c63ad;
+  --primary-lavender: #4d1eac;
 }
 
+/************* Basic Default Styles *****************/
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +17,10 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  color: var(--primary-white);
 }
 
-/* basic flex styling classes */
+/************* Basic Flex Styles ****************/
 .group {
   display: flex;
   flex-direction: column;
@@ -30,8 +35,15 @@ body {
 }
 
 /************* NAVBAR ***********/
+nav {
+  z-index: 2;
+}
+
 .navbar-brand {
   color: white !important;
+  font-size: 2rem !important;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 nav a.nav-link {
@@ -47,14 +59,57 @@ nav ul li {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid var(--primary-dark);
+  border-bottom: 0.1875rem solid var(--primary-dark);
 }
 
 .navbar-nav > li > a.active,
 .navbar-nav > li > a:focus {
-  border-top: 0.1875rem solid var(--primary-red);
+  border-bottom: 0.1875rem solid var(--primary-blue);
 }
 
 .navbar-nav > li > a:hover {
-  border-top: 0.1875rem solid var(--primary-red);
+  border-bottom: 0.1875rem solid var(--primary-blue);
+}
+
+/*************** Background Styles ******************/
+.page-wrapper {
+  position: relative;
+  background: url(web-bg-02.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+/************** Home Page Styles *******************/
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  z-index: 1;
+}
+
+.main-info h1 {
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
 }

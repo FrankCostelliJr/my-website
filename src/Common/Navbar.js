@@ -8,7 +8,7 @@ export default function Navbar() {
 
 
   return (
-  <nav className="navbar navbar-expand-lg navbar-light bg-dark text-light">
+  <nav className="navbar navbar-expand-lg navbar-light text-light" style={{backgroundColor: '#190D30'}}>
     <div className="container">
 
   <div className="group">
@@ -16,12 +16,12 @@ export default function Navbar() {
     <a className="navbar-brand" href="/">Frank Costelli</a>
     </div>
     <div className="item">
-    <p>Software Developer</p>
+    <p style={{letterSpacing: '.15rem'}}>Software Developer</p>
     </div>
   </div>
   
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <FontAwesomeIcon icon={faBars} style={{ color: '#fff'}}/>
+  <FontAwesomeIcon icon={faBars} style={{ color: '#fffeff'}}/>
   </button>
 
 
