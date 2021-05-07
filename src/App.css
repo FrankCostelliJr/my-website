@@ -17,7 +17,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--primary-white);
+  color: var(--primary-blue);
 }
 
 /************* Basic Flexbox Classes  ***************/
@@ -45,7 +45,7 @@ nav {
 
 /************ NAVBAR LOGO *************/
 .navbar-brand {
-  color: white !important;
+  color: var(--primary-blue) !important;
   font-size: 1.25rem !important;
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 0.1rem;
@@ -64,7 +64,7 @@ nav ul li {
 .navbar-nav > li > a {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-  color: var(--primary-white) !important;
+  color: var(--primary-blue) !important;
   border-bottom: 0.1875rem solid var(--primary-dark);
   transition: 0.6s ease-in-out;
 }
@@ -85,15 +85,15 @@ nav ul li {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  color: var(--primary-white);
+  color: var(--primary-blue);
 }
 
 /************** Home Page Styles *******************/
 .img {
   border-radius: 50%;
-  max-width: 200px;
+  max-width: 250px;
   margin-bottom: 20px;
-  border: 10px double var(--primary-blue);
+  border: 6px double var(--primary-blue);
 }
 .main-info {
   display: flex;
@@ -126,7 +126,7 @@ nav ul li {
   border: 3px solid var(--primary-blue);
   text-decoration: none;
   padding: 0.75rem 0.75rem 0.75rem 0.75rem;
-  color: var(--primary-white);
+  color: var(--primary-blue);
   background-color: var(--primary-dark);
   transition: 0.6s ease-in-out;
 }

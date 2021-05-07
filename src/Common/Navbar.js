@@ -16,7 +16,7 @@ export default function Navbar() {
   </div>
   
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <FontAwesomeIcon icon={faBars} style={{ color: '#fffeff'}}/>
+  <FontAwesomeIcon icon={faBars} style={{ color: '#a9b7e7'}}/>
   </button>
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
