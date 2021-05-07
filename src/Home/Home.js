@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Common/Navbar';
 import Typed from "react-typed";
 import Particles from 'react-particles-js';
+import myPhoto from '../me-2.jpeg';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         params={{
           particles: {
             number: {
-              value: 30, 
+              value: 15, 
               density: {
                 enable: true,
                 value_area: 900
@@ -19,7 +20,7 @@ export default function Home() {
             shape: {
               type: 'square',
               stroke: {
-                width: 25,
+                width: 15,
                 color: '#8010a2',
               }
             }
@@ -30,14 +31,16 @@ export default function Home() {
       <Navbar />
       <div className="page-wrapper">
         <div className="main-info">
-          <h1>Creative Software Solutions</h1>
+          <img src={myPhoto} alt="Myself" className='img' />
+          <h1>Full Stack Software Developer</h1>
           <br />
           <Typed 
-            style={{color: 'var(--primary-purple'}}
+            style={{color: 'var(--primary-purple', fontStyle: 'italic'}}
             className='typed-text'
             strings={[
               'Web Development',
               'Web Design',
+              'Web Applications',
               'Graphic Design',
               'Logo Design'
             ]}
@@ -45,17 +48,9 @@ export default function Home() {
             backSpeed={50}
             loop/>
             <br />
-        <a href="/contact" style={{
-            border: '3px solid var(--primary-blue)',
-            textDecoration: 'none',
-            padding: '.75rem .75rem .75rem .75rem',
-            backgroundColor: 'var(--primary-dark)',
-            color: 'var(--primary-white)',
-            marginTop: '10px',
-            }}>CONTACT ME</a>
+        <a href="/contact">CONTACT ME</a>
         </div>
       </div>
-
     </>
   )
 }

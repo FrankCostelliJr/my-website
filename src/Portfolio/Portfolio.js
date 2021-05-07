@@ -4,8 +4,12 @@ import Navbar from '../Common/Navbar';
 export default function Portfolio() {
   return (
     <>
-      <Navbar />
-      <h1>This is the portfolio page.</h1>
-    </>
+    <Navbar />
+    <div className="page-wrapper">
+      <div className="container">
+        <h1>This is the portfolio page.</h1>
+      </div>
+    </div>
+  </>
   )
 }

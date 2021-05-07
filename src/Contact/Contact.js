@@ -1,11 +1,18 @@
 import React from 'react';
 import Navbar from '../Common/Navbar';
 
-export default function Contact() {
+
+const ContactForm = () => {
   return (
     <>
-      <Navbar />
-      <h1>This is the contact page.</h1>
-    </>
-  )
-}
+    <Navbar />
+    <div className="page-wrapper">
+      <div className="container">
+        <h1>This is the contact page.</h1>
+      </div>
+    </div>
+  </>
+  );
+};
+
+export default ContactForm;
