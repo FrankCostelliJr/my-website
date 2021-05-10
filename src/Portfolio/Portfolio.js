@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Common/Navbar';
-import photo from '../me3.jpeg';
+import Footer from '../Common/Footer';
+import resSystem from '../res-system.png';
 
 export default function Portfolio() {
   return (
@@ -18,17 +19,13 @@ export default function Portfolio() {
       </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={photo} alt="First slide"></img>
-            <div class="carousel-caption d-md-block">
-              <h5>This is a sample project heading</h5>
-              <p>This is a sample project caption text</p>
-            </div>
+            <img className="d-block w-100" src={resSystem} alt="First slide"></img>
           </div>
           <div className="carousel-item" id="carousel-image">
-            <img className="d-block w-100" src={photo} alt="Second slide"></img>
+            <img className="d-block w-100" src={resSystem} alt="Second slide"></img>
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={photo} alt="Third slide"></img>
+            <img className="d-block w-100" src={resSystem} alt="Third slide"></img>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -39,6 +36,7 @@ export default function Portfolio() {
         </div>    
       </div>
     </div>
+    <Footer />
   </>
   )
 }

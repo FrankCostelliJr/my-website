@@ -16,7 +16,7 @@
 
 body {
   font-family: "Gruppo", cursive;
-  background: url(web-bg-02.jpg);
+  background: url(bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -25,12 +25,19 @@ body {
 
 h1,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: "Audiowide", cursive;
 }
 
 /************* Basic Flexbox Classes  ***************/
 .group {
+  display: flex;
+  flex-direction: column;
+}
+
+.subgroup {
   display: flex;
   flex-direction: column;
 }
@@ -41,7 +48,6 @@ h4 {
 
 .item-double {
   flex: 2;
-  margin-right: 20px;
 }
 
 /************* NAVBAR ***********/
@@ -50,7 +56,7 @@ nav {
 }
 
 .navbar {
-  background: linear-gradient(to right, #131b43 30%, #8010a2 100%);
+  background: linear-gradient(to right, #131b43 40%, #8710ac 150%);
 }
 
 /************ NAVBAR LOGO *************/
@@ -153,6 +159,10 @@ nav ul li {
 }
 
 /************** CONTACT FORM *****************/
+form {
+  border: 3px solid var(--primary-blue) !important;
+  padding: 8px;
+}
 
 form > button {
   background-color: var(--primary-dark);
@@ -170,11 +180,14 @@ form > button:hover {
 
 /*********** TEXT BOX BACKGROUNDS *********/
 .info-box {
-  background-color: var(--primary-dark) !important;
+  /* background-color: var(--primary-dark) !important; */
+  background: linear-gradient(45deg, #131b43 60%, #8010a2 150%) !important;
   font-family: "Gruppo", cursive;
   font-weight: 900;
-  font-size: 1.25rem;
-  border: 1px solid var(--primary-blue);
+  font-size: 1.1rem;
+  border: 3px solid var(--primary-blue);
+  padding: 8px;
+  letter-spacing: 0.1rem;
 }
 
 .info-box > ul {
@@ -185,17 +198,16 @@ form > button:hover {
 /**************** FOOTER ******************/
 footer {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
-  background-color: var(--primary-dark);
+  background: linear-gradient(to right, #131b43 40%, #8010a2 150%);
   color: var(--primary-blue);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* Footer height */
 }
 
 footer p {
@@ -205,12 +217,12 @@ footer p {
 
 /****************** CAROUSEL *****************/
 .carousel-inner > .carousel-item > img {
-  height: 50vh;
+  width: 100vw;
 }
 
 .carousel-caption {
   color: var(--primary-blue) !important;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-caption h5 {
@@ -228,4 +240,12 @@ footer p {
   .carousel-inner > .carousel-item > img {
     height: 70vh;
   }
+  .group {
+    flex-direction: row;
+  }
+}
+
+#skill-list {
+  font-size: 1rem;
+  padding-left: 20px;
 }
