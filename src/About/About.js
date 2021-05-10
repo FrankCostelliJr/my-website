@@ -7,7 +7,9 @@ export default function About() {
       <Navbar />
       <div className="page-wrapper">
         <div className="container">
-          <h1>This is the about page.</h1>
+          <br />
+          <h1>About Me</h1>
+
         </div>
       </div>
     </>

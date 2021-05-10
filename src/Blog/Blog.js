@@ -7,7 +7,9 @@ export default function Blog() {
     <Navbar />
     <div className="page-wrapper">
       <div className="container">
-        <h1>This is the blog page.</h1>
+        <br />
+        <h1>Blog</h1>
+        Coming soon...
       </div>
     </div>
   </>

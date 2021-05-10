@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from '../Common/Navbar';
 import Typed from "react-typed";
 import Particles from 'react-particles-js';
-import myPhoto from '../me-2.jpeg';
+import myPhoto from '../me3.jpeg';
+import Footer from '../Common/Footer';
 
 export default function Home() {
   return (
@@ -29,13 +30,11 @@ export default function Home() {
         }}
         />
       <Navbar />
-      <div className="page-wrapper">
         <div className="main-info">
           <img src={myPhoto} alt="Myself" className='img' />
           <h1>Full Stack Software Developer</h1>
           <br />
           <Typed 
-            style={{color: 'var(--primary-purple', fontStyle: 'italic'}}
             className='typed-text'
             strings={[
               'Web Development',
@@ -49,8 +48,8 @@ export default function Home() {
             loop/>
             <br />
         <a href="/contact">CONTACT ME</a>
+        <Footer />
         </div>
-      </div>
     </>
   )
 }

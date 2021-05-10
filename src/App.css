@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Gruppo&display=swap");
 
 :root {
   --primary-white: #fffeff;
@@ -9,15 +8,25 @@
   --primary-purple: #8010a2;
 }
 
-/************* Basic Default Styles *****************/
+/*************** General Background Styles ******************/
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  color: var(--primary-blue);
+  font-family: "Gruppo", cursive;
+  background: url(web-bg-02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--primary-blue) !important;
+}
+
+h1,
+h3,
+h4 {
+  font-family: "Audiowide", cursive;
 }
 
 /************* Basic Flexbox Classes  ***************/
@@ -32,6 +41,7 @@ body {
 
 .item-double {
   flex: 2;
+  margin-right: 20px;
 }
 
 /************* NAVBAR ***********/
@@ -47,14 +57,16 @@ nav {
 .navbar-brand {
   color: var(--primary-blue) !important;
   font-size: 1.25rem !important;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Audiowide", cursive;
   letter-spacing: 0.1rem;
 }
 
 /************** NAVBAR LINK STYLES **************/
 nav a.nav-link {
-  letter-spacing: 0.0375rem;
+  letter-spacing: 0.1rem;
   cursor: pointer;
+  font-family: "Gruppo", cursive;
+  font-weight: 900;
 }
 
 nav ul li {
@@ -78,16 +90,6 @@ nav ul li {
   border-bottom: 0.1875rem solid var(--primary-blue);
 }
 
-/*************** General Background Styles ******************/
-.page-wrapper {
-  position: relative;
-  background: url(web-bg-02.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  color: var(--primary-blue);
-}
-
 /************** Home Page Styles *******************/
 .img {
   border-radius: 50%;
@@ -95,10 +97,10 @@ nav ul li {
   margin-bottom: 20px;
   border: 6px double var(--primary-blue);
 }
+
 .main-info {
   display: flex;
   position: absolute;
-  padding-bottom: 100px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -107,7 +109,6 @@ nav ul li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
   z-index: 1;
 }
 
@@ -115,7 +116,7 @@ nav ul li {
   margin-top: 20px;
   color: var(--primary-blue);
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Audiowide", cursive;
   font-size: 1.25rem;
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -140,9 +141,10 @@ nav ul li {
 .typed-text {
   font-size: 2rem;
   color: var(--primary-white);
+  font-family: "Gruppo", cursive;
 }
 
-/************** REACT PARTICLES ************/
+/************** REACT PARTICLES EFFECTS ************/
 .tsparticles-canvas-el {
   position: absolute;
   height: 100vh;
@@ -150,8 +152,80 @@ nav ul li {
   z-index: 1;
 }
 
+/************** CONTACT FORM *****************/
+
+form > button {
+  background-color: var(--primary-dark);
+  color: var(--primary-blue);
+  padding: 6px;
+  font-weight: 900;
+  border-color: var(--primary-blue);
+  transition: 0.6s ease-in-out;
+}
+
+form > button:hover {
+  background-color: var(--primary-blue);
+  color: var(--primary-dark);
+}
+
+/*********** TEXT BOX BACKGROUNDS *********/
+.info-box {
+  background-color: var(--primary-dark) !important;
+  font-family: "Gruppo", cursive;
+  font-weight: 900;
+  font-size: 1.25rem;
+  border: 1px solid var(--primary-blue);
+}
+
+.info-box > ul {
+  list-style-position: inside;
+  list-style-type: square;
+}
+
+/**************** FOOTER ******************/
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--primary-dark);
+  color: var(--primary-blue);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Footer height */
+}
+
+footer p {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+/****************** CAROUSEL *****************/
+.carousel-inner > .carousel-item > img {
+  height: 50vh;
+}
+
+.carousel-caption {
+  color: var(--primary-blue) !important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h5 {
+  font-family: "Audiowide", cursive !important;
+  font-size: 1rem;
+}
+
+.carousel-caption p {
+  font-family: "Gruppo", cursive !important;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
 @media all and (min-width: 750px) {
-  .main-info h1 {
-    font-size: 2rem;
+  .carousel-inner > .carousel-item > img {
+    height: 70vh;
   }
 }
